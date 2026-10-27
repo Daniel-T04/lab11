@@ -8,7 +8,7 @@ At least six hands. Work out each expected value from the rules **before** you r
 
 | Hand | Expected `value()` | `is_bust()` | `is_blackjack()` |
 | --- | --- | --- | --- |
-| | | | |
+|2 | | | |
 | | | | |
 | | | | |
 | | | | |
