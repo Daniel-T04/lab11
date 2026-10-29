@@ -29,9 +29,9 @@ For each relationship, write **composition**, **aggregation**, or **association*
 
 | Relationship | Composition, aggregation, or association | One-sentence justification |
 | --- | --- | --- |
-| `Hand` and its `Card`s | | |
-| The Blackjack game and its `Deck` and `Hand`s | | |
-| `Player` and the current `Room*` in the Dungeon | | |
+| `Hand` and its `Card`s | Composition | When a hand is destroyed, its cards are destroyed with it because they are stored inline, and no other object holds those same cards. |
+| The Blackjack game and its `Deck` and `Hand`s |Composition | When the blackjack game scope ends and is destroyed, its local deck and hands are destroyed with it, and nothing else holds them.  |
+| `Player` and the current `Room*` in the Dungeon | Association | When the player is destroyed, the room survives because the player only stores a reference pointer to it, and other game entities can still access that same room. |
 
 ## 4. Checklist before you push
 
