@@ -8,12 +8,12 @@ At least six hands. Work out each expected value from the rules **before** you r
 
 | Hand | Expected `value()` | `is_bust()` | `is_blackjack()` |
 | --- | --- | --- | --- |
-|2 | | | |
-| | | | |
-| | | | |
-| | | | |
-| | | | |
-| | | | |
+|A, K | 21 | false | true|
+|A, 6 | 17 | false | false|
+|T, 8, 5 | 23 | true | false|
+|5, 7, 9 | 21 | false | true|
+|A, A, 9 | 21 | false | true|
+|2, 3 | 5 | false | true |
 
 ## 2. Design artifacts
 
