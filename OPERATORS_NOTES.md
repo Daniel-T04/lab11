@@ -20,12 +20,15 @@ At least six hands. Work out each expected value from the rules **before** you r
 List the files you added and where they are in the repository.
 
 - Updated class diagram (with `Hand` and its relationship to `Card`):
+
 design/Diagram_of_Hand_Card_Deck.png
 
 - Flowchart for `Hand::value`:
+
 design/Hand_value_flowchart.png
 
 - Flowchart for the dealer's turn:
+
 design/dealer_turn_flowchart.png
 
 
