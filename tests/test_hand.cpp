@@ -165,3 +165,31 @@ TEST(HandBustTest, OverTwentyOneIsBust) {
 // OPERATORS_NOTES.md. Work out the expected value from the rules, not from what
 // your code prints. The soft hands are the ones that catch mistakes: an ace
 // that counts 11 and later has to count 1, and hands with more than one ace.
+
+TEST(HandTableTest, Row2_SoftHand){
+    Hand h = hand_from("A 6");
+    EXPECT_EQ(h.value(), 17);
+    EXPECT_FALSE(h.is_bust());
+    EXPECT_FALSE(h.is_blackjack());
+}
+
+TEST(HandTableTest, Row4_HardTwentyOne) {
+    Hand h = hand_from("5 7 9");
+    EXPECT_EQ(h.value(), 21);
+    EXPECT_FALSE(h.is_bust());
+    EXPECT_FALSE(h.is_blackjack());
+}
+
+TEST(HandTableTest, Row5_MultipleAces) {
+    Hand h = hand_from("A A 9");
+    EXPECT_EQ(h.value(), 21);
+    EXPECT_FALSE(h.is_bust());
+    EXPECT_FALSE(h.is_blackjack());
+}
+
+TEST(HandTableTest, Row6_LowHand) {
+    Hand h = hand_from("2 3");
+    EXPECT_EQ(h.value(), 5);
+    EXPECT_FALSE(h.is_bust());
+    EXPECT_FALSE(h.is_blackjack());
+}
