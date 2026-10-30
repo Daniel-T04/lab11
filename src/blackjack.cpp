@@ -98,14 +98,14 @@ void play_blackjack() {
             continue;
         }
 
-        // Dealer turn: draws until 17 or higher (soft 17 stands)
+       
         std::cout << "Dealer's hand: " << dealer_hand << " (Value: " << dealer_hand.value() << ")\n";
         while (dealer_hand.value() < 17) {
             dealer_hand += deck.deal();
             std::cout << "Dealer hits: " << dealer_hand << " (Value: " << dealer_hand.value() << ")\n";
         }
 
-        // Compare results
+        
         int player_val = player_hand.value();
         int dealer_val = dealer_hand.value();
 
