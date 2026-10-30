@@ -4,11 +4,14 @@ One dated section per week. Paste the commands you used and the output you saw, 
 
 ## Week 11 (Lab 11)
 
-Partner name:
+Partner name: Daniel 
 
 ### Predict before you run
 
+
 Before running `hand_bug`, which hands from the Aces Table do you expect it to get wrong, and why?
+
+At first, I was excepting hand_bug to fail on hands with multiple Aces like AC, AD, AH and etc, because flawed implementations fail to properly the count when reducing Ace from 11 to 1.
 
 ### Build and run
 
@@ -20,15 +23,32 @@ cmake --build build --target hand_bug
 
 Hands whose total differs from your Aces Table (hand number, printed total, correct total):
 
+
+
 ### The GDB session on `Hand::value`
 
 Record the commands in the order you typed them. For each, one line on what it did.
 
 - Conditional breakpoint command (stop only when the hand has three cards):
+
+break Hand::value if m_count == 3
+
 - `display` commands you set:
+
+ display total.
+
+
 - Values shown at the failing step (the running total and the number of aces counted as 11 after each `next`):
+
+the value of total right it returned 21 or other incorrect number.
+
 - What `print *this` showed:
+
+ {m_cards = {{m_rank = 1, m_suit = Suit::clubs},
+
 - What `finish` returned for the failing hand, and the correct value:
+
+It returned 21.
 
 ### Cause and fix
 
