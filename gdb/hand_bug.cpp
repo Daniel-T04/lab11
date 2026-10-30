@@ -30,13 +30,9 @@ public:
   }
 
   int value() const {
-    int total = 0;
-    int aces_as_eleven = 0;
+  int total = 0;
+  int aces_as_eleven = 0;
     for (int i = 0; i < m_count; ++i) {
-      if (total > 21 && aces_as_eleven > 0) {
-        total -= 10;
-        --aces_as_eleven;
-      }
       const int rank = m_cards[i].rank();
       if (rank == 1) {
         total += 11;
@@ -44,8 +40,13 @@ public:
       } else if (rank >= 10) {
         total += 10;
       } else {
-        total += rank;
+        total += rank; 
       }
+    }
+  
+    while (total > 21 && aces_as_eleven > 0) {
+    total -= 10;
+    --aces_as_eleven;
     }
     return total;
   }
