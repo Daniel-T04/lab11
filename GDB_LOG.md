@@ -59,6 +59,9 @@ value, and it completely misses checking or reducing aces after the loop finishe
 
 - The change you made:
 
-
+Removed the if check from the beginning of the loop and added a post summation to while (total > 21 && aces_as_eleven > 0) loop at the end of the function  and correct the subtracts 10 form the total and decrements aces_as_eleven for each extra until the total is 21 or lower.
 
 - How you checked it (which hands, which result):
+
+I re-compiled and re-ran usinf ./build/hand_bug for all ten hands. TO verified that multi-ace hands like Hand 2(AC, AD) value 12, Hand 3 (AC, AD, 9H) value 21, and Hand 5 (AC, AD, AH) value 13,
+ now it matches the expected aces Table totals instead of busting improperly.
