@@ -53,5 +53,12 @@ It returned 21.
 ### Cause and fix
 
 - The line that is wrong, and what it does instead of what it should:
+
+Lines 36-39, when checking total > 21  at the begging of the loop iteration before adding the card's
+value, and it completely misses checking or reducing aces after the loop finishes if the final card causes a bust. Also it uses one if instead of a loop, which tells me it cannot handle multiple aces properly.
+
 - The change you made:
+
+
+
 - How you checked it (which hands, which result):
