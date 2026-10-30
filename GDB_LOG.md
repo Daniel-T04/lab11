@@ -16,14 +16,14 @@ At first, I was excepting hand_bug to fail on hands with multiple Aces like AC, 
 ### Build and run
 
 ```
-cmake -S . -B build
+cmake -S . -B build_bug
 cmake --build build --target hand_bug
 ./build/hand_bug
 ```
 
 Hands whose total differs from your Aces Table (hand number, printed total, correct total):
 
-
+Hand 2 (AD, AC) printed total 22. the correct total is 12 since the two aces shouldn't both count as 11 and bust the hand on step 2. You can also list any 3-card multi ace hand that mismatched your table.
 
 ### The GDB session on `Hand::value`
 
